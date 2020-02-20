@@ -1,0 +1,49 @@
+<div>
+  <mat-toolbar color="primary">Detalle de Agencia </mat-toolbar>
+
+  <div class="container">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre de Agencia</mat-label>
+        <input matInput name="nombre5" [(ngModel)]="agencia.agencia" >
+      </mat-form-field>
+    
+      <mat-form-field class="example-full-width">
+        <mat-label> Direccion </mat-label>
+        <input matInput name="nombre" [(ngModel)]="agencia.direccion" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label> Distrito </mat-label>
+        <input matInput name="nombre1" [(ngModel)]="agencia.distrito">
+      </mat-form-field>
+    
+      <mat-form-field class="example-full-width">
+        <mat-label> Longitud </mat-label>
+        <input matInput name="nombre2" [(ngModel)]="agencia.lat">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label> Longitud </mat-label>
+        <input matInput name="nombre2" [(ngModel)]="agencia.lon">
+      </mat-form-field>
+      <div class="btn-form">
+        <button (click)="edit()" mat-raised-button color="primary">Actualizar</button>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="container">
+    <!-- <app-maps></app-maps> -->
+
+    <mat-card-content>
+      <agm-map  [latitude]="agencia.lon" [longitude]="agencia.lat" [zoom]="16">
+          <agm-marker [latitude]="agencia.lon" [longitude]="agencia.lat"></agm-marker>
+      </agm-map>
+    </mat-card-content>
+  </div>
+
+ 
+
+</div>

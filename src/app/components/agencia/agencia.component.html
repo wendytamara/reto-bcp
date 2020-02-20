@@ -1,0 +1,26 @@
+<!-- <ul class="collection">
+  <li class="collection-item avatar" *ngFor="let item of agencias, let i = index" (click)="showAgency(i)" >
+    <i class="material-icons circle">folder</i>
+    <span class="title"> {{ item.agencia }} </span>
+    <p> {{ item.provincia }} <br>
+        {{ item.direccion }}
+    </p>
+    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+  </li> 
+</ul> -->
+
+<mat-card class="example-card" *ngFor="let item of agencias, let i = index" (click)="showAgency(i)" >
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image">
+      <!-- <img style="background-size: cover" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    </div>
+    <mat-card-title> {{ item.agencia }}  </mat-card-title>
+    <mat-card-subtitle> {{ item.provincia }} </mat-card-subtitle>
+    <mat-card-subtitle> {{ item.direccion }} </mat-card-subtitle>
+    <div class="icon-start" >
+      <!-- <img style="background-size: cover" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+      <a ><i class="material-icons">grade</i></a>
+    </div>
+  </mat-card-header>
+
+</mat-card>

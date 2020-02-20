@@ -1,0 +1,22 @@
+<div>
+<mat-toolbar color="primary" class="fixed-top">
+  <mat-toolbar-row>
+    <span>Agencias</span>
+    <span class="example-spacer"></span>
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-icon>search</mat-icon>
+        <input type="tel" matInput  #textoBuscar (keyup)="search(textoBuscar.value)">
+      </mat-form-field>
+    </form>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div>
+  <app-agencia [agencias]="agencias" ></app-agencia>
+</div>
+
+<button color="primary" (click)="add()" mat-fab aria-label="Example icon-button with a heart icon">
+  <mat-icon>add</mat-icon>
+</button>
